@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>low-poly island</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      font-family: 'Helvetica Neue';
+    }
+
+    #three_canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    #control {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #height_map {
+      position: absolute;
+      z-index: 1;
+      border: 1px solid;
+      height: 300px;
+      width: 300px;
+    }
+
+    #height_map_pen_circle{
+      position: absolute;
+      z-index: 0;
+      height: 300px;
+      width: 300px;
+    }
+
+    #pen_range {
+      margin-top: 320px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <canvas id='three_canvas'></canvas>
+  <div id='control'>
+    <div>
+      <canvas id='height_map'></canvas>
+      <canvas id='height_map_pen_circle'></canvas>
+    </div>
+    <input type="range" id="pen_range" min="1" max="20">
+    <label id="label" for="pen_range"> размер: 5</label>
+  </div>
+
+</body>
+<script type="module" src='script.js'></script>
+</html>
